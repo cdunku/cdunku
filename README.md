@@ -8,5 +8,5 @@
 # Projects & Contributions
 
 ### Projects
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cdunku&repo=8080&theme=github_dark)](https://github.com/anuraghazra/github-readme-stats)
 
+🎁 The complete emulation of the Intel 8080 CPU written completely in the C99 standard: [here](https://github.com/cdunku/8080)
