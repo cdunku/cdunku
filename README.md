@@ -9,5 +9,5 @@
 
 ### Projects
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cdunku&repo=github-readme-stats)](https://github.com/cdunku/8080)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cdunku&repo=github-readme-stats&theme=github_dark)]([https://github.com/anuraghazra/github-readme-stats](https://github.com/cdunku/8080))
 🎁 Intel 8080 core emulation: [here](https://github.com/cdunku/8080)
