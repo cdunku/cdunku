@@ -7,4 +7,4 @@
 
 # Projects & Contributions
 
- Intel 8080 core emulation: [here](https://github.com/cdunku/8080)
+🎁 Intel 8080 core emulation: [here](https://github.com/cdunku/8080)
