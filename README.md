@@ -1,5 +1,3 @@
-# Github Stats
-
 # Projects & Contributions
 
 ### Projects
