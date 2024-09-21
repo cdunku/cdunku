@@ -1,6 +1,6 @@
 # Projects & Contributions
 
-### Projects
+## Projects
 #### Active
 Simple [Intel 8080](https://github.com/cdunku/8080) emulator
 #### Under development
