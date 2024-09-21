@@ -2,4 +2,12 @@
 
 ### Projects
 
-🎁  The complete emulation of the **Intel 8080** CPU written completely in the C99 standard: [here](https://github.com/cdunku/8080) (Currently being rewritten)
+Cycle accurate 6502 (Currently being written)
+
+
+
+
+#### Planned
+Cycle accurate Z80
+An Arduino UNO EEPROM programmer
+A small 6502 computer (Ben Eater style).
