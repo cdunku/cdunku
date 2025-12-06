@@ -11,3 +11,5 @@
 
 ### Planned
 - Ben Eater-style 6502 home computer
+- Commodore 64 Emulator in C using my existing 6502 Emulator.
+- Solar System Simulation using C++
