@@ -1,0 +1,634 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>cdunku&#x27;s Blog</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-4fb39770.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-dac02e4e.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">cdunku&#x27;s Blog</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="homepage"><a class="header" href="#homepage">Homepage</a></h1>
+<p>This blog contains documentation referring to my previously completed and currently active projects. I will try my best to explain all the concepts in-depth and readable at the same time.</p>
+<p>Each section of the project will contain chapters and sub-chapters, dividing the segments into small but comprehensible parts. With each segment touching upon the most important features and/or concepts of each and every part of a project actively being documented.</p>
+<p>Currently available:</p>
+<p>(Projects in C)</p>
+<ul>
+<li><a href="#sea64">Sea64 (fully-fledged, cycle-ticked Commodore 64 emulator)</a></li>
+</ul>
+<p>Planned in the future:</p>
+<ul>
+<li><a href="https://github.com/cdunku/oyster">A Unix Shell called Oyster</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="sea64"><a class="header" href="#sea64">Sea64</a></h1>
+<p>You can navigate through the documentation regarding Sea64 on this page. Each component will be documented and explained in the following sections. Furthermore, the documentation will include not only technical details, but rather also my experience programming and learning about each component. The documented code will be in C.</p>
+<h1 id="component-documentation"><a class="header" href="#component-documentation">Component Documentation</a></h1>
+<ul>
+<li><a href="#mos-6510">MOS 6510</a></li>
+<li><a href="Sea64/VIC-II/README.html">VIC-II</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="mos-6510"><a class="header" href="#mos-6510">MOS 6510</a></h1>
+<p>In this section we will be covering:</p>
+<pre><code>- Introduction into the MOS 6510 
+- Its pin-out and registers
+- The Fetch-Decode-Execute cycle
+- Addressing modes and cycles
+- Instructions
+- CPU ticks
+- Illegal and unintended opcodes
+- Interrupts
+- I/O operations
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>The <strong>MOS 6510</strong> is the derivative of the <strong>MOS 6502</strong> 8-bit processor used in machines such as the Apple-II, NES and Atari 2600. But this specific CPU variant was designed for the Commodore 64 home computer with a <strong>built-in 6-pin I/O port (P0-P5 pins)</strong> and <strong>a tri-state address bus (AEC pin)</strong>.</p>
+<p>The pin-out view (* = <strong>active low</strong>):</p>
+<pre><code>                                     +-----------+
+                             in   &lt;- |           | -&gt;  RES*
+                             RDY  &lt;- |           | -&gt;  out 
+                             IRQ* &lt;- |           | -&gt;  R/(W*)
+                             NMI* &lt;- |           | -&gt;  D0
+                             AEC  &lt;- |           | -&gt;  D1
+                             VCC  &lt;- |           | -&gt;  D2
+                             A0   &lt;- |           | -&gt;  D3
+                             A1   &lt;- |           | -&gt;  D4
+                             A2   &lt;- |           | -&gt;  D5
+                             A3   &lt;- |    MOS    | -&gt;  D6
+                             A4   &lt;- |    6510   | -&gt;  D7
+                             A5   &lt;- |           | -&gt;  P0
+                             A6   &lt;- |           | -&gt;  P1
+                             A7   &lt;- |           | -&gt;  P2
+                             A8   &lt;- |           | -&gt;  P3
+                             A9   &lt;- |           | -&gt;  P4
+                             A10  &lt;- |           | -&gt;  P5
+                             A11  &lt;- |           | -&gt;  A15
+                             A12  &lt;- |           | -&gt;  A14
+                             A13  &lt;- |           | -&gt;  GND
+                                     +-----------+
+</code></pre>
+<p>Even though there are some crucial changes in the pin-out, the instruction set and the addressing modes have not been changed and are directly compatible with the 6502 (unlike the CMOS-based 65c02). But first, let me introduce you to the key concepts of this CPU and what makes it special. Later, we will touch upon the specifics of these features.</p>
+<h2 id="1-memory-banking"><a class="header" href="#1-memory-banking">1) Memory Banking</a></h2>
+<p>Since the 6502 and 6510 have the same address bus length (an address bus length of <strong>16-bits</strong>), they can only physically reference <strong>64KB of total address space</strong>, with each address holding a value of <strong>1 byte</strong> (so between <em>0-255</em>). If one populates and uses the whole memory space, there would not be any space for things like the <strong>KERNAL ROM</strong>, <strong>the BASIC ROM</strong> or <strong>the I/O chips</strong> (VIC-II for graphics and SID for sound).</p>
+<p>In order to solve this problem, the 6510 maps the I/O ports directly to addresses <code>0x0000</code> (<strong>Data Direction Register</strong> or <strong>DDR</strong> for short) and <code>0x0001</code> (<strong>Data Port</strong> or <strong>DP</strong> for short). The pins <strong>P0-P2</strong> are being used for this specific use case, they help us to determine with what ROM or I/O section operations will be performed at. The CPU controls the <strong>Commodore’s Programmable Logic Array (PLA)</strong>, which instantly swaps RAM and ROM in and out of active memory.</p>
+<h2 id="2-the-tri-state-bus"><a class="header" href="#2-the-tri-state-bus">2) The tri-state bus</a></h2>
+<p>Unlike the 6502, the 6510 includes an <strong>AEC (Address Enable Control)</strong> pin. This pin essentially enables the CPU to enter a tri-state (high-impedence) mode, disconnecting the CPU itself from the address bus and allowing the VIC-II video chip to take over the system memory (Direct Memory Access or DMA for short) and renders graphics during additional clock cycles (the VIC-II basically “steals” clock cycles from the CPU). This shared-bus actually prevents screen flickering and tearing during active processing.</p>
+<h2 id="3-datasette-and-peripherals"><a class="header" href="#3-datasette-and-peripherals">3) Datasette and Peripherals</a></h2>
+<p>The remaining I/O port pins <strong>(P3-P5)</strong> were dedicated for the I/O operations for the <strong>Datasette</strong> (the Commodore way of saying Data Casette) and <strong>other external peripherals</strong>. This way the C64 eliminated the use of additional chips dedicated only for external I/O flow, which reduced the manufacturing cost and kept the motherboard very compact.</p>
+<h2 id="4-why-the-commodore-64"><a class="header" href="#4-why-the-commodore-64">4) Why the Commodore 64?</a></h2>
+<p>My first remark of the C64 started with the 6502 itself, seeing that it was used in many systems like the NES and Apple-II made me think that creating a 6502 emulator might be a good starting point for cycle-accurate emulation with this CPU being an incredibly simple but amazing piece of engineering. Coming across the renowned Commodore 64 back in the day blew me away when I discovered the capabilities of this 8-bit computer. This computer was a remarkable piece of engineering back in the day, and hearing the nostalgia from its previous users made me curious about this masterpiece even more, hence the attempt of emulating it.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pins-and-registers"><a class="header" href="#pins-and-registers">Pins and Registers</a></h1>
+<p>In this section of the MOS 6510 documentation we will be covering the CPU’s pin-out, the CPU registers and the CPU flags, as well as the implementation of the previously mentioned. I will consider that the reader is already familiar with the terms such as opcode or operand, reserving me the time to explain what these terms mean.</p>
+<h2 id="1-pins"><a class="header" href="#1-pins">1) Pins</a></h2>
+<p>This specific CPU has in total 40 pins, with only some being relevant while writing an emulator with the functionality of most pins being applicable to the MOS 6502. The following pins will be used:</p>
+<ul>
+<li>
+<p><code>A0 - A15</code> -&gt; 16-bit address bus length of the C64 bus stored in 64KB of memory.</p>
+</li>
+<li>
+<p><code>D0 - D7</code> -&gt; 8-bit data bus length of the C64 stored in 64KB of memory.</p>
+</li>
+<li>
+<p><code>RDY</code> -&gt; Halts the CPU when it accesses other parts of a computer that have slower memory access in comparison to the 6502.
+While in the C64 it is not tied to slowery memory, but rather it is connected to the <code>VIC-II</code> during <code>DMA (Direct Memory Access)</code>.</p>
+</li>
+<li>
+<p><code>IRQ</code> -&gt; <strong>The Interrupt ReQuest</strong> pin is responsible for maskable interrupts (these interrupts are mainly run in the software level),
+it disrupts the normal flow of a program and the system enters into an alternative routine (subroutine).
+It is a maskable interrupt, because it can be ignored in some cases. All components such as the <code>VIC-II</code>, <code>SID</code> and <code>CIA</code> chips can generate an IRQ signal.</p>
+</li>
+<li>
+<p><code>NMI</code>  -&gt; <strong>Non Maskable Interrupt</strong> does what its name refers, it creates a non-maskable interrupt at the hardware level which it cannot be ignored.
+This signal is generated when for an example on reboots their computer.</p>
+</li>
+<li>
+<p><code>R/W</code> -&gt; This is the Read/Write signal, when it is high it indicates a Read signal inside the memory, and low indicated Write, which writes data in a specific address.</p>
+</li>
+<li>
+<p><code>SYNC</code> -&gt; This pin signals that the previous instruction is finished and that the CPU is “fetching” or “reading” the program counter value (that holds a memory location) for the opcode.</p>
+</li>
+<li>
+<p><code>RES</code>  -&gt; The <strong>RESET</strong> pin is a specific time of interrupt that is signaled whenever the computer is booted up in order to initialise it.</p>
+</li>
+<li>
+<p><code>AEC</code>  -&gt; <strong>Address Enable Control</strong> enables a tri-state (high impedance) mode, disconnecting the MOS 6510 from the main bus entirely and handing control to other components (such as the VIC-II).</p>
+</li>
+<li>
+<p><code>P0 - P5</code> -&gt; The <strong>PORT</strong> pins that handle external peripheral I/O flow, datasette and memory banking.</p>
+</li>
+</ul>
+<p>That was a lot to uncover, but each of these pins play an important role not only in real hardware, but also in emulator implementations as well. There are various ways of implementing and storing the status of each CPU pin, but <code>floooh</code> handling the CPU pins seemed the most readable and appealing option.</p>
+<h2 id="2-cpu-pin-out-implementation"><a class="header" href="#2-cpu-pin-out-implementation">2) CPU Pin-Out implementation</a></h2>
+<p>What essentially I have done is that I used a 64-bit pin-mask (such as <code>m6502_pins</code>) in order to store the current status of each pin. I used an <code>enum</code> in order to each pin and label them as <code>M6510_IRQ_PIN</code> or <code>M6510_RW_PIN</code>. In order not to overcomplicate things, I assumed that pins such as address-bus and data-bus pins are connected together, instead of seperating them like in the actual pin-out.</p>
+<p><strong>NOTE:</strong> All the emulated pins will be <strong>active-high</strong> instead of some being <strong>active-low</strong> in the original hardware. It makes it more convenient to write everything as <strong>active-high</strong> and more readable too! The Commodore 64 was engineered in a way that some pins were actually active when no electrical signal was supplied, due to a totally different and very important reason.</p>
+<pre><code class="language-c">typedef enum M6510_PINOUT {
+
+  M6510_ABUS_SHIFT = 0,
+  M6510_DBUS_SHIFT = 16,
+  M6510_PORT_SHIFT = 30,
+
+  M6510_ABUS_MASK  = 0xFFFFULL &lt;&lt; M6510_ABUS_SHIFT,
+  M6510_DBUS_MASK  = 0xFFULL   &lt;&lt; M6510_DBUS_SHIFT,
+  M6510_PORT_MASK  = 0x3FULL   &lt;&lt; M6510_PORT_SHIFT,
+
+  M6510_RDY_PIN = 24,
+  M6510_IRQ_PIN,
+  M6510_RW_PIN,
+  M6510_AEC_PIN,
+  
+  M6510_NMI_PIN,
+  M6510_SYNC_PIN,
+  M6510_RES_PIN,
+
+  M6510_P0_PIN,
+  M6510_P1_PIN,
+  M6510_P2_PIN,
+  M6510_P3_PIN,
+  M6510_P4_PIN,
+  M6510_P5_PIN,
+
+} M6510_PINOUT;
+</code></pre>
+<p>Next, one can store the bit positions of each pin in a seperate variable by shifting the value of <code>1</code> into their respective positions:</p>
+<pre><code class="language-c">static const uint64_t M6510_RDY  = PINMASK(M6510_RDY_PIN);
+static const uint64_t M6510_IRQ  = PINMASK(M6510_IRQ_PIN);
+static const uint64_t M6510_NMI  = PINMASK(M6510_NMI_PIN);
+static const uint64_t M6510_SYNC = PINMASK(M6510_SYNC_PIN);
+static const uint64_t M6510_RES  = PINMASK(M6510_RES_PIN);
+static const uint64_t M6510_RW   = PINMASK(M6510_RW_PIN);
+
+static const uint64_t M6510_AEC  = PINMASK(M6510_AEC_PIN);
+static const uint64_t M6510_P0   = PINMASK(M6510_P0_PIN);
+static const uint64_t M6510_P1   = PINMASK(M6510_P1_PIN);
+static const uint64_t M6510_P2   = PINMASK(M6510_P2_PIN);
+static const uint64_t M6510_P3   = PINMASK(M6510_P3_PIN);
+static const uint64_t M6510_P4   = PINMASK(M6510_P4_PIN);
+static const uint64_t M6510_P5   = PINMASK(M6510_P5_PIN);
+</code></pre>
+<p>But how does one actually update the live status of a CPU pin? It is simple really, we can create a seperate function for enabling a pin that looks like this:</p>
+<pre><code class="language-c">void pin_on(uint64_t *pins, uint64_t bit)  { *pins |= bit; }
+</code></pre>
+<p>This updates the value of one single pin! Same can be done when setting the CPU pin to inactive by doing:</p>
+<pre><code class="language-c">void pin_off(uint64_t *pins, uint64_t bit)  { *pins &amp;= ~bit; }
+</code></pre>
+<p>But what about setting/getting the address-bus and data-bus values? Well in principle it is simple really, we mask the desired pins inside our <code>m6510_pins</code> variable, shift them so that the value returned is 16-bit or 8-bit.</p>
+<p>The return function for the address bus:</p>
+<pre><code class="language-c">uint16_t get_abus(uint64_t pins, uint64_t mask, unsigned shift) {
+  return (uint16_t)((pins &amp; mask) &gt;&gt; shift);
+}
+</code></pre>
+<p>The set function for the address bus would be a bit more complicating but relatively straight forward:</p>
+<pre><code class="language-c">void set_abus(uint64_t *pins, uint64_t mask, unsigned shift, uint16_t addr) {
+  *pins = (*pins &amp; ~mask) | (((uint64_t)addr &lt;&lt; shift) &amp; mask);
+}
+</code></pre>
+<p>Essentially, we clear out the previous data inside the bit-range with <code>*pins &amp; ~mask</code> and set the new value by shifting the address to the desired position, and mask it, in order to prevent accidental override with other pins (in case the shift value is changed).</p>
+<h2 id="3-registers"><a class="header" href="#3-registers">3) Registers</a></h2>
+<p>Unlike the Intel 8080, the MOS 6510 does not have as many registers. But each register can be categorised into different groups, heavily depending on their function:</p>
+<ul>
+<li>
+<p><code>A</code>  -&gt; <strong>The Accumulator</strong> is the workhorse of the CPU, it is the only register that is directly wired to the <strong>ALU (Arithmethic Logic Unit)</strong>.
+Which means that it is responsible for <strong>all arithmethic</strong> (ADC, SBC), <strong>bit-shifting</strong> (ASL, ROL) and <strong>bit-masking</strong> (EOR, AND) operations.</p>
+</li>
+<li>
+<p><code>X</code> -&gt; Used primarily for structural addressing techniques, such as <code>Indexed Indirect Zeropage</code> or <code>$(ZP, X)</code>, it acts as a counter loop variable because it is incremented/decremented (INX, DEX) <strong>directly inside</strong> the CPU.
+Which saves precious time from memory accesses, where <strong>INX and DEX</strong> are only single-byte instructions.</p>
+</li>
+<li>
+<p><code>Y</code> -&gt; The opposite from <strong>X</strong>, dedicated for handling large-scale data arrays through addressing modes such as <code>($ZP), Y</code>.
+<strong>Y</strong> cannot be used in certain unique arithmethic operations and addressing modes using <strong>Y</strong> use more clock cycles in comparison to <strong>X</strong>.</p>
+</li>
+<li>
+<p><code>PC</code> -&gt; <strong>The Program Counter</strong> is the only 16-bit CPU register, it helps the developer to track execution of the program (fetch the operands for each instruction) and fetches the next instruction (opcode).
+It holds the address the instruction is currently using, from which the CPU reads from in order to fetch data previously mentioned.
+The PC is split internally into two 8-bit registers: <code>PCH</code> (High byte) and <code>PCL</code> (Low byte).</p>
+</li>
+<li>
+<p><code>S</code> -&gt; <strong>The Stack Pointer</strong> acts as an active pointer to the hardware’s stack in memory and it is only 8-bits wide unlike the Intel 8080 (with a 16-bit SP).
+The address is physically hardcoded between the address range of <code>0x100 - 0x1FF</code>. The register decrements during pushing onto the stack (e.g. instruction PHA) and increments when pulled/popped (instruction PLA).</p>
+</li>
+<li>
+<p><code>IR</code> -&gt; <strong>Instruction Register</strong> holds the value of the current and following opcode. Value retrieved when <code>SYNC</code> is active.</p>
+</li>
+<li>
+<p><code>TCU</code> -&gt; <strong>Timing Control Unit</strong> tracks the current amount of cycles executed during the execution of an instruction.</p>
+</li>
+<li>
+<p><code>AL</code> -&gt; <strong>The Address Latch</strong> is a seperate 16-bit register, which is used for temporary address storing during the execution of addressing modes.
+It helps with the index-based calculation in addressing mode.</p>
+</li>
+<li>
+<p><code>DL</code> -&gt; <strong>The Data Latch</strong> very similar functionality to the <code>AL</code>, but instead of it storing an address, it stores a byte of data.</p>
+</li>
+<li>
+<p><code>P</code> -&gt; <strong>The Processor Status Register</strong> stores the single-bit conditional flags into this register.
+The status of each bit is affected and updated due to the recent outcomes of most ALU calculations or system interrupts.</p>
+</li>
+</ul>
+<p>With each bit condition having a very unique and important purpose:</p>
+<pre><code>                                  N V 1 B D I Z C
+                                  ^ ^ ^ ^ ^ ^ ^ ^
+                                  7 6 5 4 3 2 1 0
+                                  | | | | | | | |
+                                 +---------------+
+                                 |  Register P   |
+                                 +---------------+
+</code></pre>
+<ul>
+<li>
+<p><code>N</code> -&gt; <strong>Negative flag</strong> is set when the target result is signed (In signed integers, when the last bit is set to <code>1</code>, it is a negative integer).</p>
+</li>
+<li>
+<p><code>V</code> -&gt; <strong>Overflow flag</strong> is set if an invalid signed arithmethic wrap-around (basically overflow) occurs.</p>
+</li>
+<li>
+<p><code>1</code> -&gt; <strong>Unused bit</strong> set to <code>1</code> by default.</p>
+</li>
+<li>
+<p><code>B</code> -&gt; <strong>Break flag</strong> checks and distinguishes if a stack push was caused by a <code>BRK</code> software command.</p>
+</li>
+<li>
+<p><code>D</code> -&gt; <strong>Decimal flag</strong> switches the ALU into Binary Coded Decimal (BCD) mode.</p>
+</li>
+<li>
+<p><code>I</code> -&gt; <strong>Interrupt Disable flag</strong> blocks level-triggered (IRQ) interrupts when set. Checked in the second-to-last cycle of every instruction (or polling-phase).</p>
+</li>
+<li>
+<p><code>Z</code> -&gt; <strong>Zero flag</strong> is set when the value checked is equal to <code>0</code>.</p>
+</li>
+<li>
+<p><code>C</code> -&gt; <strong>Carry flag</strong> is set when an unsigned operation overflows <code>8</code> bits or underflows <code>0</code>.</p>
+</li>
+</ul>
+<p>The amount of information might be overwhelming, but all of these serve a very important purpose in the CPU execution as we are going to see in the following chapters.</p>
+<h2 id="4-6502-struct-implementation"><a class="header" href="#4-6502-struct-implementation">4) 6502 struct implementation</a></h2>
+<p>Since we have covered the key facts about the 6510’s registers, let us actually implement them in C!</p>
+<p>First, let’s declare a struct that will store our variables:</p>
+<pre><code class="language-c">typedef struct m65xx_t {
+ 
+ /* ... */
+
+  uint64_t m6510_pins;
+  
+  uint8_t a, x, y, s, p, tcu;
+  
+  uint16_t ir;
+  
+  union { struct { uint8_t pcl; uint8_t pch; }; uint16_t pc; };
+  
+  union { struct { uint8_t adl; uint8_t adh; }; uint16_t ad; };
+
+  /* ... */
+
+} m65xx_t;
+</code></pre>
+<p>As previously mentioned, we use the <code>m6510_pins</code> variable to store the live state of the CPU pins and the all the <code>8-bit</code> registers are all declared at once, nice!
+But what about <code>IR</code> (which in hardware only stores values up to 255), you may ask.
+Since the all other interrupts are essentially very similar to <code>BRK</code> under the hood, they can be written in the same <code>BRK</code> function with a bunch of conditional checks in order to determine the <code>interrupt vectors</code>.
+I avoided that implementation due to it being incredibly unreadable and not understandable, hence I have declared the interrupts and mapped them to the values <code>0x100</code>, <code>0x101</code> and <code>0x102</code>.</p>
+<p>You can sometimes break the rules in order to avoid redundancy :)!</p>
+<p>What about this weird <code>union { struct { ... } ... };</code> declaraction? It just basically maps out the low and high bytes of <code>PC</code> and <code>AD</code>inside memory, so that data stored inside either variable will be directly reflected to the main <code>16 bit</code> variable (only possible in the C standards after <code>C99</code>). Additionally, since the MOS 6502 is natively <code>little-endian</code>, the lower bytes have to be declared first and right after the high bytes follow.</p>
+<p>This is the end of the section regarding the pins and registers of the <code>MOS 6510</code>! Next, we will be covering <code>fetch cycle</code> and how it works under the hood.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="the-fetch-decode-execute-cycle"><a class="header" href="#the-fetch-decode-execute-cycle">The Fetch-Decode-Execute Cycle</a></h1>
+<p>During every read of a specific memory location, data that can be retrieved and later worked with or manipulated.
+This data can be either an operand (the data an instruction uses during its execution) or an opcode (the byte that identifies the instruction), but can the CPU distinguish the data used as an opcode or an operand? Spoiler Alert: <strong>It can’t</strong>, the CPU is <strong>“too dumb”</strong> and <strong>“helpless”</strong> on its own. That is why the CPU has to have specific pins in order to operate as desired, with one of these pins being the previously mentioned <code>SYNC</code> pin. The CPU later identifies the instruction and begins with execution.</p>
+<h2 id="1-fetching-initialisation"><a class="header" href="#1-fetching-initialisation">1) Fetching Initialisation</a></h2>
+<p>During the end of each instruction, the CPU sets the right conditions for the following instruction-fetching. The conditions are reading current address the <code>PC</code> points to, reseting the <code>TCU</code> to <code>0</code>, setting the <code>READ</code> signal and activating the <code>SYNC</code> pin.</p>
+<p>Here is an example from the <code>IMMEDIATE</code> (<code>#</code>) addressing mode along with our <code>fetch()</code> function, <code>IMMEDIATE</code> is 2 clock cycles long:</p>
+<pre><code class="language-c">void m6510_fetch(m65xx_t* const m) {
+  m6510_set_abus(m, m-&gt;pc);
+  m6510_pin_on(m, M6510_SYNC);
+}
+
+
+void imme(m65xx_t* const m) {
+  switch (m-&gt;tcu) {
+    
+    case 1: {
+      m6510_set_abus(m, m-&gt;pc);
+
+      break;
+    }
+
+    case 2: {
+      m6502_opcode_table[m-&gt;ir].instr(m); 
+
+      m-&gt;tcu = 0;
+      m6510_fetch(m);
+      break;
+    }
+    
+  }
+}
+</code></pre>
+<p>During <code>IMMEDIATE</code>’s execution, the 1st clock cycle reads the <code>PC</code> for the operand our instruction will use and the 2nd clock cycle executes our instruction and sets the right conditions for an <code>opcode fetch</code>. The CPU finished the instruction and continues with the next fetched opcode.</p>
+<h2 id="2-fetching-decoding-executing"><a class="header" href="#2-fetching-decoding-executing">2) Fetching, Decoding, Executing</a></h2>
+<p>So, we have set the right conditions and finished the last instruction, what next? Well, we have to fetch the new instruction, but before that, the CPU checks for edge-cases and interrupt conditions, I/O requests before reaching the fetching cycle. The reason is, there are many high priority tasks and requests from other components and schedulers that need to be checked before even giving a chance for the CPU to do its own thing. That is how we allow chips such as the <code>VIC-II</code> to do their job as intended.</p>
+<p>After passing the checks for edge-cases and I/O requests, we deactivate the <code>SYNC</code> pin, after entering into the fetch-cycle phase. But before putting our opcode into the <code>IR</code> (this register stores and helps us identify the opcode), the CPU checks for interrupts in the first phase of the fetch cycle, because interrupt execution has priority over normal instruction execution.</p>
+<p>No interrupt has occurred and we can finally fetch our opcode? Great!</p>
+<pre><code class="language-c">void m6510_tick(m65xx_t* const m) {
+
+  /*
+    *Interrupt conditions, edge cases and I/O requests 
+    *                    ...
+  */
+
+  if(m-&gt;m6510_pins &amp; M6510_SYNC) {
+    
+    m6510_pin_off(m, M6510_SYNC);
+  
+    // Logic for executing interrupts here
+    if(INTERRUPT_HAS_OCCURRED) {
+        /* 
+         * Check which interrupt and execute
+         *             ...
+        */
+    } 
+    else {
+      m-&gt;ir = m6510_get_dbus(m);
+      m-&gt;pc++; 
+    }
+  }
+
+  m-&gt;tcu++;
+  m-&gt;cpu_clock++;
+
+  m6510_pin_on(m, M6510_RW);
+  // Call instruction/addressing mode 
+  m6502_opcode_table[m-&gt;ir].mode(m);
+}
+</code></pre>
+<p>During a fetch cycle, the processor retrieves the opcode value from the data bus and puts it onto <code>IR</code> and increments the <code>PC</code>. Incrementing the <code>PC</code> is important because we are fetching an operand for the instruction for it to work with, which in most cases the operand will be used during the same instruction. Addressing modes such as <code>IMPLIED</code> and <code>ACCUMULATOR</code> are special cases. After the value of <code>IR</code> is updated, the CPU searches the opcode in a table according to the value retrieved from the data bus.</p>
+<p>Let’s say as an example <code>IR = 0xA9</code>, the CPU goes through its mapped table and finds out that <code>0xA9</code> is <code>LDA #</code>.</p>
+<pre><code class="language-c">m65xx_opcodes_t m6502_opcode_table[0x103] = {
+  [0x00] =  { .mode = brk, .instr = impl },
+  [0x01] =  { .mode = idxr, .instr = ora },
+  [0x02] =  { .mode = jam, .instr = impl },
+  [0x03] =  { .mode = idxm, .instr = slo },
+ 
+ /*                ...                  */
+
+  [0xA9] =  { .mode = imme, .instr = lda },
+
+  /*                ...                  */
+
+}
+</code></pre>
+<p>It decodes the opcode by checking the addressing mode and the instruction that will be executed.
+The addressing modes gets executed first, followed by the instruction:</p>
+<pre><code class="language-c">/*         EXECUTE ADDRESSING MODE FIRST          */
+
+
+void imme(m65xx_t* const m) {
+  switch (m-&gt;tcu) {
+    
+    case 1: {
+      m6510_set_abus(m, m-&gt;pc);
+
+      break;
+    }
+
+    case 2: {
+     
+     // This is where we call the instruction before the new fetch cycle
+     // when the instruction execution is done, we come back to this function again
+     // and in the 2nd clock phase of the last clock cycle we set the conditions for fetch 
+      m6502_opcode_table[m-&gt;ir].instr(m); 
+
+      m-&gt;tcu = 0;
+      m6510_fetch(m);
+      break;
+    }
+    
+  }
+}
+
+/*         NOW EXECUTE THE INSTRUCTION         */
+
+void lda(m65xx_t* const m) {
+  set_nz(m, m-&gt;a = m6510_get_dbus(m));
+}
+</code></pre>
+<p>After executing the instruction in the 1st phase of the last clock cycle, we repeat! The CPU sets the conditions and for the next <code>fetch</code> cycle in the 2nd clock phase and those everything from scratch.</p>
+<p>This wasn’t too bad was it? In the next section we will be learning and going through different types of addressing modes and what happens during each clock cycle in each addressing mode.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
